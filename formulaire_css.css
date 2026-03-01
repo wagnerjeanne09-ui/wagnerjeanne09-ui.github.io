@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --vert-fonce: #2d5a45;
+    --vert-moyen: #4a7c63;
+    --vert-clair: #8fb5a0;
+    --beige: #eeeee6;
+    --beige-fonce: #e0e0d4;
+    --blanc: #ffffff;
+    --texte: #2a2a2a;
+    --texte-doux: #5a5a5a;
+    --rouge-erreur: #c0392b;
+    --vert-ok: #27ae60;
+}
+
+body {
+    background-color: var(--beige);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--texte);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── MOTIF DE FOND ── */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(circle, rgba(45,90,69,0.07) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+}
+
+nav, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── NAVBAR ── */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: var(--beige);
+    border-bottom: 1px solid var(--beige-fonce);
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--vert-moyen);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+/* ── MAIN ── */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    animation: fadeDown 0.6s ease both;
+}
+
+.form-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--vert-fonce);
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: var(--texte-doux);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* ── CARD ── */
+.card {
+    background: var(--blanc);
+    border-radius: 20px;
+    padding: 2.5rem 3rem;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 8px 40px rgba(45, 90, 69, 0.1);
+    animation: fadeUp 0.7s ease both 0.1s;
+}
+
+/* ── BARRE DE PROGRESSION ── */
+.progress-bar-wrap {
+    height: 4px;
+    background: var(--beige-fonce);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--vert-clair), var(--vert-fonce));
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-label {
+    font-size: 0.75rem;
+    color: var(--texte-doux);
+    text-align: right;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+}
+
+.progress-label.done {
+    color: var(--vert-ok);
+    font-weight: 500;
+}
+
+/* ── CHAMPS ── */
+.field {
+    margin-bottom: 1.4rem;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--vert-fonce);
+    margin-bottom: 0.45rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.field:focus-within label {
+    color: var(--vert-moyen);
+    transform: translateX(2px);
+    transition: color 0.2s, transform 0.2s;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--beige-fonce);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--texte);
+    background: var(--beige);
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--vert-moyen);
+    background: var(--blanc);
+    box-shadow: 0 0 0 3px rgba(74, 124, 99, 0.12);
+}
+
+input.valid {
+    border-color: var(--vert-ok);
+}
+
+input.invalid,
+select.invalid {
+    border-color: var(--rouge-erreur);
+}
+
+.hint {
+    font-size: 0.78rem;
+    color: var(--texte-doux);
+    margin-top: 0.35rem;
+}
+
+.error-msg {
+    font-size: 0.78rem;
+    color: var(--rouge-erreur);
+    margin-top: 0.35rem;
+    display: none;
+}
+
+.error-msg.visible {
+    display: block;
+}
+
+/* ── COCHE ANIMÉE ── */
+.field-check {
+    position: relative;
+}
+
+.field-check::after {
+    content: '✓';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    color: var(--vert-ok);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+}
+
+.field-check.show-check::after {
+    transform: translateY(-50%) scale(1);
+}
+
+/* ── MOT DE PASSE CRITÈRES ── */
+.pwd-criteria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.criteria-item {
+    font-size: 0.78rem;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s;
+}
+
+.criteria-item.ok {
+    color: var(--vert-ok);
+}
+
+.criteria-item::before {
+    content: '○';
+    font-size: 0.7rem;
+}
+
+.criteria-item.ok::before {
+    content: '●';
+}
+
+/* ── GENRE RADIO ── */
+.radio-group {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--texte);
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: var(--vert-fonce);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ── SELECT ── */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232d5a45' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* ── SÉPARATEUR ── */
+.divider {
+    border: none;
+    border-top: 1px solid var(--beige-fonce);
+    margin: 1.8rem 0;
+}
+
+/* ── BOUTON ── */
+.submit-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background: var(--vert-fonce);
+    color: var(--blanc);
+    border: none;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    letter-spacing: 0.02em;
+}
+
+.submit-btn:hover {
+    background: var(--vert-moyen);
+    box-shadow: 0 4px 20px rgba(45, 90, 69, 0.25);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.submit-btn.ready {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ── BANNIÈRE ERREUR GLOBALE ── */
+.global-error {
+    background: #fdf0ef;
+    border: 1.5px solid var(--rouge-erreur);
+    color: var(--rouge-erreur);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    font-size: 0.88rem;
+    margin-bottom: 1.2rem;
+    animation: shake 0.35s ease;
+}
+
+/* ── FOOTER ── */
+footer {
+    background: var(--vert-fonce);
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.8rem;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%       { transform: translateX(-6px); }
+    75%       { transform: translateX(6px); }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(45, 90, 69, 0.4); }
+    50%       { box-shadow: 0 0 0 10px rgba(45, 90, 69, 0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    nav { padding: 1rem 1.5rem; }
+    .card { padding: 2rem 1.5rem; }
+    .pwd-criteria { grid-template-columns: 1fr; }
+}

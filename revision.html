@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Révision — Réviser.fr</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Serif+Display&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="revision_css.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-left">
+    <a href="page_principale.html" class="home-btn" title="Retour à l'accueil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+        <polyline points="9 21 9 12 15 12 15 21"/>
+      </svg>
+    </a>
+    <a href="page_principale.html" class="logo">Réviser.fr</a>
+  </div>
+  <div>
+    <a href="revision.html" class="btn-reviser">Commencer à réviser</a>
+  </div>
+</header>
+
+<!-- ── intro ── -->
+<div class="hero">
+  <span class="subject-badge">Bonus</span>
+  <h1>Rév<span>ision</span></h1>
+  <p class="hero-desc">
+  Au lycée, réviser régulièrement et adopter une méthode efficace est essentiel pour bien comprendre et retenir les notions. Réviser ne se limite pas à relire le cours, il faut s’entraîner, mémoriser activement et s’organiser pour gagner en confiance et aborder les contrôles sereinement
+
+Chaque élève apprend différemment : certains préfèrent les fiches, d’autres les cartes mentales, les exercices, expliquer à voix haute ou travailler en groupe. L’important est de trouver la méthode qui correspond à ses préférences et à son rythme pour progresser efficacement et réviser en toute confiance
+  </p>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- ── cube ── -->
+<div class="stats-band">
+  <div class="stat-card">
+    <span class="stat-number">6</span>
+    <span class="stat-label">Thèmes</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">7</span>
+    <span class="stat-label">Fiches et astuces</span>
+  </div>
+</div>
+
+<!-- ── explication ── -->
+<div class="content-section">
+
+  <h2 class="section-heading">Fiches de révision</h2>
+  <p class="section-sub">Clique sur un thème pour dérouler les fiches sur différente méthode de révison.</p>
+
+  <div class="accordion" id="accordion">
+
+    <!-- THÈME 1 : pomodoro -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">La méthode pomodoro</div>
+            <span class="theme-count">1 ressource</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+     <div class="sub-item">
+		<div class="sub-thumb">
+			<img src="revision1.jpg" alt="Fiche">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Temps de travail, pauses stratégiques, concentration maximale et gestion de la fatigue — tout ce qu’il faut savoir pour utiliser la méthode Pomodoro et réviser efficacement sans procrastiner.
+
+La méthode Pomodoro repose sur un principe simple : travailler en sessions courtes et intensives (généralement 25 minutes), suivies de pauses courtes (5 minutes). Après quatre sessions, on prend une pause plus longue (15 à 30 minutes).
+
+Pourquoi ça marche ?
+Parce que le cerveau se concentre mieux sur une durée limitée. Savoir qu’une pause arrive réduit la fatigue mentale et aide à éviter la procrastination.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 2 : blurting -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">La méthode blurting</div>
+            <span class="theme-count">1 ressource</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		<div class="sub-thumb">
+			<img src="revision2.jpg" alt="Fiche ">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Cours</div>
+              <div class="sub-desc">Mémoire active, rappel sans support, identification des lacunes et apprentissage efficace — tout ce qu’il faut savoir pour utiliser la méthode du blurting et mémoriser durablement.
+
+Le blurting consiste à écrire tout ce dont on se souvient d’un cours, sans regarder ses notes. On “vide” son cerveau sur la feuille.
+Pourquoi c’est efficace ?
+Expliquer à quelqu’un est l’une des meilleures façons de comprendre profondément. On identifie ses zones floues et on gagne en confiance.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+              </div>
+            </div></div>    
+
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- THÈME 3 : blurting -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Les flashcards</div>
+            <span class="theme-count">1 ressource</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		<div class="sub-thumb">
+			<img src="revision3.jpg" alt="Fiche ">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Cours</div>
+              <div class="sub-desc">Questions-réponses, répétition espacée, mémorisation active et automatisation — tout ce qu’il faut savoir pour utiliser les flashcards et retenir ses cours durablement.
+
+Une flashcard contient une question d’un côté et la réponse de l’autre. Le but est de tester sa mémoire activement.
+Pourquoi ça fonctionne ?
+Parce que la répétition espacée renforce les connexions neuronales. Plus on rappelle une information au bon moment, plus elle s’ancre durablement.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+              </div>
+            </div></div>    
+
+        </div>
+      </div>
+    </div>
+  
+			
+		
+
+    <!-- THÈME 4 : groupr -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Groupe de révision</div>
+            <span class="theme-count">1 ressource</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		    <div class="sub-thumb">
+			<img src="revision4.jpg" alt="fiche">
+        </div>
+		
+		
+            <div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Explications mutuelles, échanges d’idées, motivation collective et correction des erreurs — tout ce qu’il faut savoir pour réussir ses révisions en groupe.
+
+Réviser en groupe ne signifie pas simplement être ensemble, mais travailler activement ensemble.
+Pourquoi c’est efficace ?
+Expliquer à quelqu’un est l’une des meilleures façons de comprendre profondément. On identifie ses zones floues et on gagne en confiance.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 5 : application -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Outil de travaille</div>
+            <span class="theme-count">2 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="revision5.jpg" alt="fiche">
+        </div>
+		
+            <div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Révisions rapides entraînement interactif et progression régulière tout ce qu’il faut savoir pour utiliser les applications et optimiser son temps
+
+Elles permettent de travailler quelques minutes par jour de manière efficace et organisée Grâce aux quiz et aux rappels on reste régulier et on identifie plus facilement ses difficultés
+
+Les applications express aident à gagner du temps tout en renforçant ses connaissances</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Application</span>
+              </div>
+            </div></div>
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="revision6.jpg" alt="fiche">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Application pour se concentrer</div>
+              <div class="sub-desc">Certainne application sont très utile pour se concentrer.</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Application</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 6 : IA -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">L'intelligence artificielle</div>
+            <span class="theme-count">1 ressource</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="revision7.jpg" alt="fiche">
+        </div>
+			<div class="sub-info">
+              <div class="sub-title">astuce</div>
+              <div class="sub-desc">Explications claires exercices adaptés et aide personnalisée tout ce qu’il faut savoir pour utiliser l’IA comme un véritable outil de travail
+
+Elle peut reformuler un cours proposer des entraînements et poser des questions pour vérifier la compréhension Bien utilisée elle aide à progresser plus vite tout en restant actif dans son apprentissage
+
+L’IA devient alors un soutien efficace pour mieux comprendre et mieux réussir</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /accordion fin -->
+</div>
+
+<!-- ── affichage image ── -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxDirect()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLight(-1)">‹</button>
+  <div class="lightbox-img-wrap">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLight(1)">›</button>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="page_principale.html" class="footer-logo">Réviser.fr</a>
+      <p>Des fiches de cours claires et efficaces pour réviser sans stress, comprendre plus vite et réussir tes examens. Conçu par une élève, pour les élèves.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Matières</h4>
+      <ul>
+        <li><a href="#">Mathématique</a></li>
+        <li><a href="#">Physique-chimie</a></li>
+        <li><a href="#">NSI</a></li>
+        <li><a href="#">Français</a></li>
+        <li><a href="#">Histoire</a></li>
+        <li><a href="#">Géographie</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Le site</h4>
+      <ul>
+        <li><a href="#">Comment réviser</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Réviser.fr — Tous droits réservés</span>
+    <div class="credits">
+      <a href="#">Crédits images : moi</a>
+      <span>·</span>
+      <a href="#">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+<script>
+/* ── ACCORDION ── */
+  function toggleAccordion(header) {
+    const item = header.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── LIGHTBOX ── */
+  let allImages = [];   // liste de toutes les images cliquables
+  let currentIdx = 0;
+
+  // Ouvrir au clic sur une sub-thumb contenant une img
+  document.addEventListener('click', function(e) {
+    const thumb = e.target.closest('.sub-thumb');
+    if (!thumb) return;
+    const img = thumb.querySelector('img');
+    if (!img) return;
+
+    // Reconstruire la liste à chaque ouverture (au cas où le DOM change)
+    allImages = [...document.querySelectorAll('.sub-thumb img')];
+    currentIdx = allImages.indexOf(img);
+    showLightbox(currentIdx);
+  });
+
+  function showLightbox(idx) {
+    const img = allImages[idx];
+    if (!img) return;
+    currentIdx = idx;
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCap = document.getElementById('lightboxCaption');
+
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = img.alt || '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Cacher les flèches si une seule image
+    document.querySelector('.lightbox-prev').style.display = allImages.length > 1 ? 'flex' : 'none';
+    document.querySelector('.lightbox-next').style.display = allImages.length > 1 ? 'flex' : 'none';
+  }
+
+  function navigateLight(dir) {
+    const newIdx = (currentIdx + dir + allImages.length) % allImages.length;
+    showLightbox(newIdx);
+  }
+
+  function closeLightbox(e) {
+    // Ferme seulement si on clique sur le fond (pas sur l'image)
+    if (e.target === document.getElementById('lightbox')) closeLightboxDirect();
+  }
+
+  function closeLightboxDirect() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Touche Escape et flèches clavier
+  document.addEventListener('keydown', function(e) {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape')      closeLightboxDirect();
+    if (e.key === 'ArrowRight')  navigateLight(1);
+    if (e.key === 'ArrowLeft')   navigateLight(-1);
+  });
+</script>
+</body>
+<!-- </html> -->

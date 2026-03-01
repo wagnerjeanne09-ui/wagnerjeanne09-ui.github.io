@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réviser.fr — Inscription</title>
+    <link rel="stylesheet" href="formulaire_css.css">
+</head>
+<body>
+
+<!-- bandeau en haut+ lien ver site princiaple -->
+<nav>
+    <a href="page_principale.html" class="nav-logo">Réviser.fr</a>
+</nav>
+
+<!-- Site -->
+<main>
+    <div class="form-header">
+        <h1>Bienvenue !</h1>
+        <p>Une petite étape avant de commencer à réviser…</p>
+    </div>
+
+    <div class="card">
+
+        <!-- BARRE DE PROGRESSION -->
+        <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-label" id="progressLabel">0 / 7 champs complétés</p>
+
+        <form id="inscriptionForm" action="page_principale.html" method="GET" novalidate>
+
+            <!-- NOM -->
+            <div class="field">
+                <label for="nom">Nom</label>
+                <div class="field-check" id="wrap-nom">
+                    <input type="text" id="nom" name="nom" placeholder=".....">
+                </div>
+                <span class="error-msg" id="err-nom">Ce champ est requis.</span>
+            </div>
+
+            <!-- PRÉNOM -->
+            <div class="field">
+                <label for="prenom">Prénom</label>
+                <div class="field-check" id="wrap-prenom">
+                    <input type="text" id="prenom" name="prenom" placeholder=".....">
+                </div>
+                <span class="error-msg" id="err-prenom">Ce champ est requis.</span>
+            </div>
+
+            <hr class="divider">
+
+            <!-- IDENTIFIANT -->
+            <div class="field">
+                <label for="identifiant">Identifiant</label>
+                <div class="field-check" id="wrap-identifiant">
+                    <input type="text" id="identifiant" name="Identifiant" placeholder="ex: Reviseur#42">
+                </div>
+                <span class="hint">N'utilise pas ton vrai prénom ou nom.</span>
+                <span class="error-msg" id="err-identifiant">L'identifiant ne peut pas être ton prénom ou ton nom.</span>
+            </div>
+
+            <!-- MOT DE PASSE -->
+            <div class="field">
+                <label for="motdepasse">Mot de passe</label>
+                <div class="field-check" id="wrap-motdepasse">
+                    <input type="password" id="motdepasse" name="motdepasse" placeholder="••••••••">
+                </div>
+                <div class="pwd-criteria">
+                    <span class="criteria-item" id="crit-len">8 caractères minimum</span>
+                    <span class="criteria-item" id="crit-maj">1 majuscule</span>
+                    <span class="criteria-item" id="crit-num">1 chiffre</span>
+                    <span class="criteria-item" id="crit-spe">1 caractère spécial</span>
+                </div>
+                <span class="error-msg" id="err-mdp">Le mot de passe ne respecte pas les critères.</span>
+            </div>
+
+            <hr class="divider">
+
+            <!-- EMAIL -->
+            <div class="field">
+                <label for="gmail">Adresse e-mail</label>
+                <div class="field-check" id="wrap-gmail">
+                    <input type="email" id="gmail" name="adressemail" placeholder="marie@exemple.fr">
+                </div>
+                <span class="error-msg" id="err-email">Adresse e-mail invalide (doit contenir un @).</span>
+            </div>
+
+            <!-- GENRE -->
+            <div class="field" id="field-sexe">
+                <label>Genre</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="sexe" value="M"> Homme
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="sexe" value="F"> Femme
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="sexe" value="X"> Autre
+                    </label>
+                </div>
+                <span class="error-msg" id="err-sexe">Veuillez choisir un genre.</span>
+            </div>
+
+            <!-- FONCTION -->
+            <div class="field">
+                <label for="fonction">Statue</label>
+                <select id="fonction" name="fonction">
+                    <option value="" disabled selected>Sélectionne ta situation</option>
+                    <option value="Enseignant">Enseignant(e)</option>
+                    <option value="seconde">Seconde</option>
+                    <option value="premiere">Première</option>
+                    <option value="termianale">Terminale</option>
+                    <option value="Autre">Autre</option>
+                </select>
+                <span class="error-msg" id="err-fonction">Veuillez sélectionner une fonction.</span>
+            </div>
+
+            <!-- COMMENTAIRES -->
+            <div class="field">
+                <label for="commentaire">
+                    Commentaires
+                    <span style="font-weight:300;text-transform:none;font-size:0.8rem;color:var(--texte-doux)">(optionnel)</span>
+                </label>
+                <textarea id="commentaire" name="commentaire" placeholder="Un mot, une suggestion…"></textarea>
+            </div>
+
+            <!-- BANNIÈRE ERREUR GLOBALE -->
+            <div id="global-error" class="global-error" style="display:none;">
+                ! Certains champs sont incomplets ou incorrects. Corrige-les pour continuer !
+            </div>
+
+            <button type="submit" class="submit-btn">Commencer à réviser →</button>
+
+        </form>
+    </div>
+</main>
+
+<!-- credit -->
+<footer>
+    © 2025 Réviser.fr — Tous droits réservés
+</footer>
+
+<script>
+// ── BARRE DE PROGRESSION ──
+const TOTAL_CHAMPS = 7; // nom, prenom, identifiant, mdp, email, sexe, fonction
+
+function updateProgress() {
+    const nom      = document.getElementById('nom').value.trim();
+    const prenom   = document.getElementById('prenom').value.trim();
+    const ident    = document.getElementById('identifiant').value.trim();
+    const mdp      = document.getElementById('motdepasse').value;
+    const email    = document.getElementById('gmail').value.trim();
+    const sexe     = document.querySelector('input[name="sexe"]:checked');
+    const fonction = document.getElementById('fonction').value;
+
+    const mdpOk = mdp.length >= 8
+        && /[A-Z]/.test(mdp)
+        && /[0-9]/.test(mdp)
+        && /[_,%,#,!,@,$,&,*,.,\-,+]/.test(mdp);
+
+    let count = 0;
+    if (nom)    count++;
+    if (prenom) count++;
+    if (ident && ident.toLowerCase() !== nom.toLowerCase() && ident.toLowerCase() !== prenom.toLowerCase()) count++;
+    if (mdpOk)  count++;
+    if (email && /@/.test(email)) count++;
+    if (sexe)   count++;
+    if (fonction) count++;
+
+    const pct = Math.round((count / TOTAL_CHAMPS) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+
+    const label = document.getElementById('progressLabel');
+    label.textContent = count + ' / ' + TOTAL_CHAMPS + ' champs complétés';
+    label.classList.toggle('done', count === TOTAL_CHAMPS);
+
+    // effet sur le bouton quand tout est rempli
+    document.querySelector('.submit-btn').classList.toggle('ready', count === TOTAL_CHAMPS);
+}
+
+// surveille tous les champs pour la progression et mettre le code a jour
+document.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('input', updateProgress);
+    el.addEventListener('change', updateProgress);
+});
+
+// ── COCHE vert sur les champs texte ──
+function checkField(inputId, isValid) {
+    const wrap = document.getElementById('wrap-' + inputId);
+    if (wrap) wrap.classList.toggle('show-check', isValid);
+}
+
+document.getElementById('nom').addEventListener('blur', function () {
+    checkField('nom', this.value.trim().length > 0);
+});
+
+document.getElementById('prenom').addEventListener('blur', function () {
+    checkField('prenom', this.value.trim().length > 0);
+});
+
+document.getElementById('identifiant').addEventListener('blur', function () {
+    const v = this.value.trim().toLowerCase();
+    const n = document.getElementById('nom').value.trim().toLowerCase();
+    const p = document.getElementById('prenom').value.trim().toLowerCase();
+    checkField('identifiant', v.length > 0 && v !== n && v !== p);
+});
+
+document.getElementById('gmail').addEventListener('blur', function () {
+    checkField('gmail', /@/.test(this.value));
+});
+
+// ── CRITÈRES MOT DE PASSE en temps réel pour mettre a jour les critere en dessous ──
+const mdpInput = document.getElementById('motdepasse');
+
+mdpInput.addEventListener('input', () => {
+    const v = mdpInput.value;
+    toggle('crit-len', v.length >= 8);
+    toggle('crit-maj', /[A-Z]/.test(v));
+    toggle('crit-num', /[0-9]/.test(v));
+    toggle('crit-spe', /[_,%,#,!,@,$,&,*,.,\-,+]/.test(v));
+
+    const pwdOk = v.length >= 8
+        && /[A-Z]/.test(v)
+        && /[0-9]/.test(v)
+        && /[_,%,#,!,@,$,&,*,.,\-,+]/.test(v);
+    checkField('motdepasse', pwdOk);
+});
+
+function toggle(id, ok) {
+    document.getElementById(id).classList.toggle('ok', ok);
+}
+
+// ── VALIDATION À LA SOUMISSION ──
+const form = document.getElementById('inscriptionForm');
+
+form.addEventListener('submit', function (e) {
+    let valid = true;
+
+    const nom         = document.getElementById('nom').value.trim().toLowerCase();
+    const prenom      = document.getElementById('prenom').value.trim().toLowerCase();
+    const identifiant = document.getElementById('identifiant').value.trim().toLowerCase();
+    const mdp         = mdpInput.value;
+    const email       = document.getElementById('gmail').value.trim();
+    const sexeChoisi  = document.querySelector('input[name="sexe"]:checked');
+    const fonction    = document.getElementById('fonction').value;
+
+    // Nom
+    if (!nom) { showErr('nom', 'err-nom', true);  valid = false; }
+    else       { showErr('nom', 'err-nom', false); }
+
+    // Prénom
+    if (!prenom) { showErr('prenom', 'err-prenom', true);  valid = false; }
+    else          { showErr('prenom', 'err-prenom', false); }
+
+    // Identifiant
+    if (!identifiant || identifiant === nom || identifiant === prenom) {
+        showErr('identifiant', 'err-identifiant', true);  valid = false;
+    } else {
+        showErr('identifiant', 'err-identifiant', false);
+    }
+
+    // Mot de passe
+    const pwdOk = mdp.length >= 8
+        && /[A-Z]/.test(mdp)
+        && /[0-9]/.test(mdp)
+        && /[_,%,#,!,@,$,&,*,.,\-,+]/.test(mdp);
+    if (!pwdOk) { showErr('motdepasse', 'err-mdp', true);  valid = false; }
+    else         { showErr('motdepasse', 'err-mdp', false); }
+
+    // Email
+    if (!email || !/@/.test(email)) { showErr('gmail', 'err-email', true);  valid = false; }
+    else                             { showErr('gmail', 'err-email', false); }
+
+    // Genre
+    const errSexe = document.getElementById('err-sexe');
+    if (!sexeChoisi) { errSexe.classList.add('visible');    valid = false; }
+    else              { errSexe.classList.remove('visible'); }
+
+    // Fonction
+    const errFonction    = document.getElementById('err-fonction');
+    const selectFonction = document.getElementById('fonction');
+    if (!fonction) {
+        errFonction.classList.add('visible');
+        selectFonction.classList.add('invalid');
+        valid = false;
+    } else {
+        errFonction.classList.remove('visible');
+        selectFonction.classList.remove('invalid');
+    }
+
+    // Bannière globale
+    const banner = document.getElementById('global-error');
+    if (!valid) {
+        e.preventDefault();
+        banner.style.display   = 'block';
+        banner.style.animation = 'none';
+        banner.offsetHeight;                  // reflow pour relancer l'animation
+        banner.style.animation = '';
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        banner.style.display = 'none';
+    }
+});
+
+// ── UTILITAIRE : affiche / cache une erreur sous un champ ──
+function showErr(inputId, errId, show) {
+    const input = document.getElementById(inputId);
+    const msg   = document.getElementById(errId);
+    if (show) {
+        input.classList.add('invalid');
+        input.classList.remove('valid');
+        msg.classList.add('visible');
+    } else {
+        input.classList.remove('invalid');
+        input.classList.add('valid');
+        msg.classList.remove('visible');
+    }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Déroulant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .menu-titre {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-titre:hover {
+            background-color: #45a049;
+        }
+
+        .menu-contenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #f9f9f9;
+        }
+
+        .menu-contenu.actif {
+            max-height: 1000px;
+        }
+
+        .contenu-interne {
+            padding: 20px;
+        }
+
+        .contenu-interne img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .fleche {
+            transition: transform 0.3s ease;
+        }
+
+        .fleche.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Menus Déroulants</h1>
+
+    <!-- Premier menu -->
+    <div class="menu-item">
+        <div class="menu-titre" onclick="toggleMenu(this)">
+            <span>Section 1 : Introduction</span>
+            <span class="fleche">▼</span>
+        </div>
+        <div class="menu-contenu">
+            <div class="contenu-interne">
+                <p>Ceci est le contenu de la première section.</p>
+                <p>Vous pouvez ajouter du texte, des images et plus encore.</p>
+                <img src="https://via.placeholder.com/600x200/4CAF50/ffffff?text=Image+1" alt="Exemple">
+            </div>
+        </div>
+    </div>
+
+    <!-- Deuxième menu -->
+    <div class="menu-item">
+        <div class="menu-titre" onclick="toggleMenu(this)">
+            <span>Section 2 : Galerie</span>
+            <span class="fleche">▼</span>
+        </div>
+        <div class="menu-contenu">
+            <div class="contenu-interne">
+                <h3>Galerie d'images</h3>
+                <img src="https://via.placeholder.com/400x300/FF5722/ffffff?text=Photo+1" alt="Photo 1">
+                <p>Description de l'image ci-dessus.</p>
+                <img src="https://via.placeholder.com/400x300/2196F3/ffffff?text=Photo+2" alt="Photo 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Troisième menu -->
+    <div class="menu-item">
+        <div class="menu-titre" onclick="toggleMenu(this)">
+            <span>Section 3 : Informations</span>
+            <span class="fleche">▼</span>
+        </div>
+        <div class="menu-contenu">
+            <div class="contenu-interne">
+                <h3>Plus d'informations</h3>
+                <ul>
+                    <li>Point numéro 1</li>
+                    <li>Point numéro 2</li>
+                    <li>Point numéro 3</li>
+                </ul>
+                <p>Vous pouvez personnaliser ce contenu comme vous le souhaitez.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu(element) {
+            // Récupère le contenu à afficher/masquer
+            const contenu = element.nextElementSibling;
+            const fleche = element.querySelector('.fleche');
+            
+            // Toggle la classe 'actif'
+            contenu.classList.toggle('actif');
+            fleche.classList.toggle('rotate');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathématiques — Réviser.fr</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Serif+Display&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mathematique_css.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-left">
+    <a href="page_principale.html" class="home-btn" title="Retour à l'accueil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+        <polyline points="9 21 9 12 15 12 15 21"/>
+      </svg>
+    </a>
+    <a href="page_principale.html" class="logo">Réviser.fr</a>
+  </div>
+  <div>
+    <a href="revision.html" class="btn-reviser">Commencer à réviser</a>
+  </div>
+</header>
+
+<!-- ── introduction ── -->
+<div class="hero">
+  <span class="subject-badge">Spécialité</span>
+  <h1>Mathé<span>matiques</span></h1>
+  <p class="hero-desc">
+   En Première spécialité mathématiques, tu découvres de nombreuses nouvelles notions comme les fonctions, les dérivées, les suites, la géométrie ou les probabilités.
+
+Ici, tu trouveras des fiches claires et accessibles, conçues pour t’accompagner pas à pas, t’aider à comprendre plus facilement et réviser en toute confiance pour les contrôles.
+  </p>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- ── cube resumer ── -->
+<div class="stats-band">
+  <div class="stat-card">
+    <span class="stat-number">6</span>
+    <span class="stat-label">Thèmes</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">24</span>
+    <span class="stat-label">Fiches de cours</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">7</span>
+    <span class="stat-label">Exercices</span>
+  </div>
+</div>
+
+<!-- ── explication ── -->
+<div class="content-section">
+
+  <h2 class="section-heading">Fiches de révision</h2>
+  <p class="section-sub">Clique sur un thème pour dérouler les fiches et exercices disponibles.</p>
+
+  <div class="accordion" id="accordion">
+
+    <!-- THÈME 1 : proba -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Probabilité</div>
+            <span class="theme-count">3 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+     <div class="sub-item">
+		<div class="sub-thumb">
+			<img src="proba1.jpg" alt="Fiche proba">
+        </div>
+		<div class="sub-thumb">
+			<img src="proba2.jpg" alt="Fiche proba">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Univers, événements, tableaux et arbres de probabilités — tout ce qu’il faut savoir pour calculer des probabilités et résoudre n’importe quel exercice de Probabilité.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="proba_exercice.jpg" alt="exercice proba">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Exercices — Probabilité</div>
+              <div class="sub-desc">Un exercice complet qui demandera de mobiliser toutes tes connaissances.</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Exercices</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 2 : second degre -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Le second degré</div>
+            <span class="theme-count">4 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="second_degre1.jpg" alt="Fiche équations du second degré">
+        </div>
+		<div class="sub-thumb">
+			<img src="second_degre2.jpg" alt="Fiche équations du second degré">
+        </div>
+		<div class="sub-thumb">
+			<img src="second_degre3.jpg" alt="Fiche équations du second degré">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Cours</div>
+              <div class="sub-desc">Second degré, discriminant, racines et tableaux de signes — tout ce qu’il faut savoir pour résoudre et maîtriser n’importe quel exercice d’équations et d’inéquations du second degré.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+
+          
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="2degre_exercice.jpg" alt="exercice second degré">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Exercices — Second degré</div>
+              <div class="sub-desc">Un exercice complet qui demandera de mobiliser toutes tes connaissances.</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Exercices</span>
+              </div>
+            </div></div>
+
+        
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 3 : suite -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Les suites</div>
+            <span class="theme-count">11 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="suite1.jpg" alt="Fiche suite numerique">
+        </div>
+		
+		<div class="sub-thumb">
+			<img src="suite2.jpg" alt="Fiche suite numerique">
+        </div>
+		
+		<div class="sub-thumb">
+			<img src="suite3.jpg" alt="Fiche suite numerique">
+        </div>
+		
+		<div class="sub-thumb">
+			<img src="suite4.jpg" alt="Fiche suite numerique">
+        </div>
+		
+		
+            <div class="sub-info">
+              <div class="sub-title">suite numerique</div>
+              <div class="sub-desc">Suites numériques, terme général, variations et représentation — tout ce qu’il faut savoir pour comprendre et résoudre n’importe quel exercice sur les suites.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+			
+			
+			<div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="suite5.jpg" alt="Fiche arith">
+        </div>
+		
+		<div class="sub-thumb">
+			<img src="suite6.jpg" alt="Fiche suite arith">
+        </div>
+		
+            <div class="sub-info">
+              <div class="sub-title">suite arithmétiques</div>
+              <div class="sub-desc">Suites arithmétiques, raison, terme initial et évolution — tout ce qu’il faut savoir pour calculer et maîtriser les suites arithmétiques.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+			
+			
+			<div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="suite7.jpg" alt="Fiche suite geo">
+        </div>
+		
+            <div class="sub-info">
+              <div class="sub-title">suite géométrique</div>
+              <div class="sub-desc">Suites géométriques, raison, croissance ou décroissance et formules — tout ce qu’il faut savoir pour résoudre efficacement les exercices sur les suites géométriques.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+			
+			
+			<div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="suite8.jpg" alt="Fiche suite somme">
+        </div>
+		<div class="sub-thumb">
+			<img src="suite9.jpg" alt="Fiche suite somme">
+        </div>
+		
+            <div class="sub-info">
+              <div class="sub-title">Somme des suites</div>
+              <div class="sub-desc">Sommes de suites, formules, calculs rapides et applications — tout ce qu’il faut savoir pour déterminer la somme de termes d’une suite.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="suite_exercice1.jpg" alt="exercice suite ">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Exerice - Suite</div>
+              <div class="sub-desc">Un exercice complet qui demandera de mobiliser toutes tes connaissances.</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Exercices</span>
+              </div>
+            </div></div>
+			
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="suite_exercice2.jpg" alt="exercice suite">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Exercice - Somme de suite</div>
+              <div class="sub-desc">Un exercice complet qui demandera de mobiliser toutes tes connaissances.</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Exercices</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 4 : dérivé -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Dérivation</div>
+            <span class="theme-count">6 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		    <div class="sub-thumb">
+			<img src="derivé1.jpg" alt="dérivation">
+        </div>
+		<div class="sub-thumb">
+			<img src="derivé2.jpg" alt="dérivation">
+        </div>
+		<div class="sub-thumb">
+			<img src="derivé3.jpg" alt="dérivation">
+        </div>
+		<div class="sub-thumb">
+			<img src="derivé4.jpg" alt="dérivation">
+        </div>
+		<div class="sub-thumb">
+			<img src="derivé5.jpg" alt="dérivation">
+        </div>
+		
+            <div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Dérivées, définition, règles de calcul et interprétation graphique — tout ce qu’il faut savoir pour étudier et résoudre n’importe quel exercice de dérivation.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="derive_exercice1.jpg" alt="exerccie">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Exercice - Dérivation</div>
+              <div class="sub-desc">Un exercice complet qui demandera de mobiliser toutes tes connaissances.</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Exercices</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 5 : Trigonométrie -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">La trigonométrie</div>
+            <span class="theme-count">3 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="trigo1.jpg" alt="trigo">
+        </div>
+		<div class="sub-thumb">
+			<img src="trigo2.jpg" alt="trigo">
+        </div>
+		
+            <div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Trigonométrie, sinus, cosinus, tangente et identités remarquables — tout ce qu’il faut savoir pour résoudre et maîtriser les exercices de trigonométrie.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+                <span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="trigo_exercice.jpg" alt="exercice trigonometrie">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Exercices — Trigonométrie</div>
+              <div class="sub-desc">Un exercice complet qui demandera de mobiliser toutes tes connaissances.</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Exercices</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 6 : Derivation 2 -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">dérivation 2</div>
+            <span class="theme-count">4 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="derivé(2)1.jpg" alt="dérivation">
+        </div>
+				  <div class="sub-thumb">
+			<img src="derivé(2)2.jpg" alt="dérivation">
+        </div>
+				  <div class="sub-thumb">
+			<img src="derivé(2)3.jpg" alt="dérivation">
+        </div>
+            
+			<div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Tableaux de variations et de signes, dérivées, zéros et intervalles — tout ce qu’il faut savoir pour analyser le comportement d’une fonction.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+				<span class="tag tag-formule">Formules</span>
+              </div>
+            </div></div>
+
+          <div class="sub-item">
+		   <div class="sub-thumb">
+			<img src="variation_exercice.jpg" alt="exercice dérivation">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Exercice - tableau de variation</div>
+              <div class="sub-desc">Un exercice complet qui demandera de mobiliser toutes tes connaissances.</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Exercices</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /accordion fin -->
+</div>
+
+<!-- ── Affiche image ── -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxDirect()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLight(-1)">‹</button>
+  <div class="lightbox-img-wrap">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLight(1)">›</button>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="page_principale.html" class="footer-logo">Réviser.fr</a>
+      <p>Des fiches de cours claires et efficaces pour réviser sans stress, comprendre plus vite et réussir tes examens. Conçu par une élève, pour les élèves.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Matières</h4>
+      <ul>
+        <li><a href="#">Mathématique</a></li>
+        <li><a href="#">Physique-chimie</a></li>
+        <li><a href="#">NSI</a></li>
+        <li><a href="#">Français</a></li>
+        <li><a href="#">Histoire</a></li>
+        <li><a href="#">Géographie</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Le site</h4>
+      <ul>
+        <li><a href="#">Comment réviser</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Réviser.fr — Tous droits réservés</span>
+    <div class="credits">
+      <a href="#">Crédits images : moi</a>
+      <span>·</span>
+      <a href="#">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+<script>
+/* ── ACCORDION un seul a la fois peux etre ouvert ── */
+  function toggleAccordion(header) {
+    const item = header.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── LIGHTBOX ── */
+  let allImages = [];   // liste de toutes les images cliquables
+  let currentIdx = 0;
+
+  // Ouvrir au clic sur une sub-thumb contenant une img
+  document.addEventListener('click', function(e) {
+    const thumb = e.target.closest('.sub-thumb');
+    if (!thumb) return;
+    const img = thumb.querySelector('img');
+    if (!img) return;
+
+    // Reconstruire la liste à chaque ouverture (au cas où le DOM change)
+    allImages = [...document.querySelectorAll('.sub-thumb img')];
+    currentIdx = allImages.indexOf(img);
+    showLightbox(currentIdx);
+  });
+
+  function showLightbox(idx) {
+    const img = allImages[idx];
+    if (!img) return;
+    currentIdx = idx;
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCap = document.getElementById('lightboxCaption');
+
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = img.alt || '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Cacher les flèches si une seule image
+    document.querySelector('.lightbox-prev').style.display = allImages.length > 1 ? 'flex' : 'none';
+    document.querySelector('.lightbox-next').style.display = allImages.length > 1 ? 'flex' : 'none';
+  }
+
+  function navigateLight(dir) {
+    const newIdx = (currentIdx + dir + allImages.length) % allImages.length;
+    showLightbox(newIdx);
+  }
+
+  function closeLightbox(e) {
+    // Ferme seulement si on clique sur le fond (pas sur l'image)
+    if (e.target === document.getElementById('lightbox')) closeLightboxDirect();
+  }
+
+  function closeLightboxDirect() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Touche Escape et flèches clavier
+  document.addEventListener('keydown', function(e) {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape')      closeLightboxDirect();
+    if (e.key === 'ArrowRight')  navigateLight(1);
+    if (e.key === 'ArrowLeft')   navigateLight(-1);
+  });
+</script>
+</body>
+</html>

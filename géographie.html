@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Géographie — Réviser.fr</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Serif+Display&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="geo_css.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-left">
+    <a href="page_principale.html" class="home-btn" title="Retour à l'accueil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+        <polyline points="9 21 9 12 15 12 15 21"/>
+      </svg>
+    </a>
+    <a href="page_principale.html" class="logo">Réviser.fr</a>
+  </div>
+  <div>
+    <a href="revision.html" class="btn-reviser">Commencer à réviser</a>
+  </div>
+</header>
+
+<!-- ── intro ── -->
+<div class="hero">
+  <span class="subject-badge">Tronc-commun</span>
+  <h1>Géo<span>graphie</span></h1>
+  <p class="hero-desc">
+  En Première générale en géographie, tu découvres de nouveaux thèmes essentiels pour comprendre le monde contemporain comme les dynamiques des territoires, la mondialisation, les mobilités, les espaces urbains ou encore les enjeux environnementaux.
+
+Ici, tu trouveras des fiches claires et accessibles, conçues pour t’accompagner pas à pas, t’aider à mieux comprendre les notions importantes, analyser des cartes et des documents, et réviser efficacement pour réussir tes contrôles en toute confiance.
+  </p>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- ── cube ── -->
+<div class="stats-band">
+  <div class="stat-card">
+    <span class="stat-number">4</span>
+    <span class="stat-label">Thèmes</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">4</span>
+    <span class="stat-label">Fiches de cours</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">4</span>
+    <span class="stat-label">Cartes</span>
+  </div>
+</div>
+
+<!-- ── explication ── -->
+<div class="content-section">
+
+  <h2 class="section-heading">Fiches de révision</h2>
+  <p class="section-sub">Clique sur un thème pour dérouler les fiches disponibles.</p>
+
+  <div class="accordion" id="accordion">
+
+    <!-- THÈME 1 : theme 1 -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">La métropolisation: un processus mondial différencié</div>
+            <span class="theme-count">3 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+     <div class="sub-item">
+		<div class="sub-thumb">
+			<img src="geo2.jpg" alt="Fiche">
+        </div>
+		<div class="sub-thumb">
+			<img src="geo3.jpg" alt="Fiche">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">cours</div>
+              <div class="sub-desc">Villes mondiales, métropoles, réseaux et hiérarchies urbaines — tout ce qu’il faut savoir pour comprendre la métropolisation, analyser ses effets sur les territoires et expliquer pourquoi ce processus est mondial mais inégal selon les régions du monde</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+              </div>
+            </div></div>
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="geo1.jpg" alt="Fiche ">
+        </div>
+		
+            <div class="sub-info">
+              <div class="sub-title">carte</div>
+              <div class="sub-desc">Une carte présentant les grands enjeux du thème</div>
+              <div class="sub-tags">
+                 <span class="tag tag-fiche">Carte de cours</span>
+              </div>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 2 : theme2 -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Diversification des espaces et des acteurs de la production</div>
+            <span class="theme-count">5 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="geo7.jpg" alt="Fiche">
+        </div>
+		<div class="sub-thumb">
+			<img src="geo8.jpg" alt="Fiche ">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Cours</div>
+              <div class="sub-desc">Espaces productifs, mondialisation, entreprises, firmes transnationales et nouvelles dynamiques économiques — l’essentiel pour comprendre comment la production se transforme, se diffuse et s’organise entre différents territoires et acteurs</div>
+              <div class="sub-tags">
+                <span class="tag tag-fiche">Fiche de cours</span>
+              </div>
+            </div></div>
+
+          
+
+          <div class="sub-item">
+		  <div class="sub-thumb">
+			<img src="geo4.jpg" alt="Fiche">
+        </div>
+		<div class="sub-thumb">
+			<img src="geo5.jpg" alt="Fiche">
+        </div>
+		<div class="sub-thumb">
+			<img src="geo6.jpg" alt="Fiche">
+        </div>
+            <div class="sub-info">
+              <div class="sub-title">Carte</div>
+              <div class="sub-desc">Une carte présentant les grands enjeux du thème</div>
+              <div class="sub-tags">
+                <span class="tag tag-exo">Carte de cours</span>
+              </div>
+            </div></div>
+
+        
+
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 3 : theme 3 -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">Les espaces ruraux: multifonctionnalité</div>
+            <span class="theme-count">0 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">  
+           
+	<p> A venir...</p>		
+			
+        </div>
+      </div>
+    </div>
+
+    <!-- THÈME 4 : theme4 -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-left">
+          <div>
+            <div class="theme-title">La Chine: des recompositions spatiales multiples</div>
+            <span class="theme-count">0 ressources</span>
+          </div>
+        </div>
+        <div class="accordion-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-inner">
+
+       <p>A venir...</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /accordion fin -->
+</div>
+
+<!-- ── affichage image ── -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxDirect()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLight(-1)">‹</button>
+  <div class="lightbox-img-wrap">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLight(1)">›</button>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="page_principale.html" class="footer-logo">Réviser.fr</a>
+      <p>Des fiches de cours claires et efficaces pour réviser sans stress, comprendre plus vite et réussir tes examens. Conçu par une élève, pour les élèves.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Matières</h4>
+      <ul>
+        <li><a href="#">Mathématique</a></li>
+        <li><a href="#">Physique-chimie</a></li>
+        <li><a href="#">NSI</a></li>
+        <li><a href="#">Français</a></li>
+        <li><a href="#">Histoire</a></li>
+        <li><a href="#">Géographie</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Le site</h4>
+      <ul>
+        <li><a href="#">Comment réviser</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Réviser.fr — Tous droits réservés</span>
+    <div class="credits">
+      <a href="#">Crédits images : moi</a>
+      <span>·</span>
+      <a href="#">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+<script>
+/* ── ACCORDION ── */
+  function toggleAccordion(header) {
+    const item = header.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── LIGHTBOX ── */
+  let allImages = [];   // liste de toutes les images cliquables
+  let currentIdx = 0;
+
+  // Ouvrir au clic sur une sub-thumb contenant une img
+  document.addEventListener('click', function(e) {
+    const thumb = e.target.closest('.sub-thumb');
+    if (!thumb) return;
+    const img = thumb.querySelector('img');
+    if (!img) return;
+
+    // Reconstruire la liste à chaque ouverture (au cas où le DOM change)
+    allImages = [...document.querySelectorAll('.sub-thumb img')];
+    currentIdx = allImages.indexOf(img);
+    showLightbox(currentIdx);
+  });
+
+  function showLightbox(idx) {
+    const img = allImages[idx];
+    if (!img) return;
+    currentIdx = idx;
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCap = document.getElementById('lightboxCaption');
+
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = img.alt || '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Cacher les flèches si une seule image
+    document.querySelector('.lightbox-prev').style.display = allImages.length > 1 ? 'flex' : 'none';
+    document.querySelector('.lightbox-next').style.display = allImages.length > 1 ? 'flex' : 'none';
+  }
+
+  function navigateLight(dir) {
+    const newIdx = (currentIdx + dir + allImages.length) % allImages.length;
+    showLightbox(newIdx);
+  }
+
+  function closeLightbox(e) {
+    // Ferme seulement si on clique sur le fond (pas sur l'image)
+    if (e.target === document.getElementById('lightbox')) closeLightboxDirect();
+  }
+
+  function closeLightboxDirect() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Touche Escape et flèches clavier
+  document.addEventListener('keydown', function(e) {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape')      closeLightboxDirect();
+    if (e.key === 'ArrowRight')  navigateLight(1);
+    if (e.key === 'ArrowLeft')   navigateLight(-1);
+  });
+</script>
+</body>
+</html>

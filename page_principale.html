@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="page_principale_css.css" rel="stylesheet">
+    <title>cours </title>
+    <!--  on lie le code avec EmailJS  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("4Kx5IMhdV3QP5grAm"); //clé publique EmailJS
+      })();
+    </script>
+</head>
+<body>	
+		
+<header>
+  <a href="#" class="logo">Réviser.fr</a>
+  <div class="header-right">
+    <button class="btn-newsletter" id="openNewsletter" aria-label="Newsletter">
+       Newsletter
+    </button>
+    <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/revision.html" class="btn-reviser">Commencer à réviser</a>
+  </div>
+</header>
+
+<!-- ========== POP-UP NEWSLETTER ========== -->
+<div class="newsletter-overlay" id="newsletterOverlay">
+  <div class="newsletter-modal">
+    <button class="newsletter-close" id="closeNewsletter" aria-label="Fermer">✕</button>
+    <div class="newsletter-icon">✉️</div>
+    <h2 class="newsletter-title">Reste informé(e) !</h2>
+    <p class="newsletter-text">
+      Inscris-toi à la newsletter de <strong>Réviser.fr</strong> pour être parmi les premiers à découvrir les nouvelles fiches de cours, les astuces de révision et les nouveaux contenus. C'est gratuit et tu peux te désinscrire à tout moment.
+    </p>
+    <form id="newsletterForm" class="newsletter-form">
+      <input 
+        type="email" 
+        id="emailInput"
+        placeholder="Ton adresse email..." 
+        required 
+        class="newsletter-input"
+      />
+      <button type="submit" class="newsletter-submit">S'inscrire</button>
+    </form>
+    <p class="newsletter-feedback" id="newsletterFeedback"></p>
+  </div>
+</div>
+
+
+<!-- ========== carousselle ========== -->
+
+   <div class="carousel-container">
+   
+        <div class="carousel-header">
+            <h1>Réviser.fr</h1>
+			<p>Bienvenue! </p>
+			<p>Ici, tu découvriras une grande collection de fiches de cours claires, simples et efficaces, conçues pour t'aider à progresser dans de nombreuses matières : maths, français, histoire-géo, physique, et bien d'autres encore.</p>
+			<p>Chaque fiche va à l'essentiel : les notions importantes sont expliquées de façon compréhensible, avec des exemples et des résumés pour mieux comprendre plus vite et réviser sans stress. Que ce soit pour revoir un chapitre, préparer un contrôle ou réviser avant un examen, tout est pensé pour te faire gagner du temps.</p>
+			<p>Mais ce n'est pas tout ! </p>
+			<p>Le site propose aussi des techniques et astuces de travail pour apprendre plus efficacement : mieux mémoriser, s'organiser, réviser intelligemment et gérer son temps. Tu y trouveras également des conseils pour être plus serein(e) face aux contrôles, aux devoirs et aux examens. </p>
+			<p> L'objectif est simple : t'aider à réussir, à prendre confiance en toi et à travailler de manière plus efficace, sans pression inutile.</p>
+        </div>
+
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+               
+			   <!-- 1 -->
+        <div class="carousel-slide">
+			<div class="slide-image">
+				<img src="math.jpg" alt="description de l'image">
+			</div>
+			<div class="slide-content">
+				<h2>Mathématique</h2>
+				 <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/Mathematique.html" class="slide-link">
+				<p>Retrouve des fiches claires, des formules essentielles et des exemples simples pour mieux comprendre les maths et progresser efficacement tout au long de l'année.</p>
+				</a>
+			</div>
+		</div>
+
+                <!--  2 -->
+        <div class="carousel-slide">
+			<div class="slide-image">
+				<img src="PC.jpg" alt="description de l'image">
+			</div>
+			<div class="slide-content">
+				<h2>Physique-chimie</h2>
+				  <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/physique-chimi.html" class="slide-link">
+				<p>Découvre des fiches simples, des notions expliquées clairement et des exemples pour mieux comprendre les lois de la physique et de la chimie pour réussir tes contrôles.</p>
+				</a>
+			</div>
+		</div>
+
+                <!--  3 -->
+        <div class="carousel-slide">
+			<div class="slide-image">
+				<img src="NSI.jpg" alt="description de l'image">
+			</div>
+			<div class="slide-content">
+				<h2>NSI</h2>
+				  <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/NSI.html" class="slide-link">
+				<p>Retrouve des fiches claires pour comprendre l'informatique, les algorithmes et la programmation, avec des explications simples pour progresser et réussir en NSI.</p>
+				</a>
+			</div>
+		</div>
+
+                <!-- 4 -->
+        <div class="carousel-slide">
+			<div class="slide-image">
+				<img src="francais.jpg" alt="description de l'image">
+			</div>
+			<div class="slide-content">
+				<h2>Francais</h2>
+				  <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/Francais.html" class="slide-link">
+				<p>Découvre des fiches simples pour mieux comprendre la grammaire, la littérature et les méthodes d'analyse, afin de progresser à l'écrit comme à l'oral.</p>
+				</a>
+			</div>
+		</div>
+				
+				<!-- 5 -->
+         <div class="carousel-slide">
+			<div class="slide-image">
+				<img src="histoire.jpg" alt="description de l'image">
+			</div>
+			<div class="slide-content">
+				<h2>Histoire</h2>
+				   <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/histoire.html" class="slide-link">
+				<p>Retrouve des fiches claires pour comprendre les grandes périodes, les événements importants et les notions clés, afin de mieux réviser et réussir en histoire.</p>
+				</a>
+			</div>
+		</div>
+		
+				<!-- 6 -->
+         <div class="carousel-slide">
+			<div class="slide-image">
+				<img src="geo.jpg" alt="description de l'image">
+			</div>
+			<div class="slide-content">
+				<h2>Géographie</h2>
+				   <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/g%C3%A9ographie.html" class="slide-link">
+				<p>Des fiches claires pour comprendre les territoires, les paysages et les grands enjeux du monde. Cartes et notions essentielles pour réviser efficacement.</p>
+				</a>
+			</div>
+		</div>
+           
+		   <!--7-->
+		<div class="carousel-slide">
+			<div class="slide-image">
+				<img src="revise.jpg" alt="description de l'image">
+			</div>
+			<div class="slide-content">
+				<h2>Comment réviser</h2>
+				    <a href="file:///C:/Users/Eleve/Documents/NSI/chap4/TP/revision.html" class="slide-link">
+				<p>Découvre des méthodes simples et efficaces pour mieux apprendre, mémoriser tes cours et réviser sans stress avant les contrôles et examens.</p>
+				</a>
+			</div>
+		</div>   
+		   
+		   </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" aria-label="Précédent">‹</button>
+                <button class="carousel-btn" id="nextBtn" aria-label="Suivant">›</button>
+            </div>
+
+            <div class="carousel-indicators" id="indicators"></div>
+        </div>
+	 </div>
+
+
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="footer-logo">Réviser.fr</a>
+      <p>Des fiches de cours claires et efficaces pour réviser sans stress, comprendre plus vite et réussir tes examens. Conçu par une élèvee, pour les élèves.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Matières</h4>
+      <ul>
+        <li><a href="#">Mathématique</a></li>
+        <li><a href="#">Physique-chimie</a></li>
+        <li><a href="#">NSI</a></li>
+        <li><a href="#">Français</a></li>
+        <li><a href="#">Histoire</a></li>
+        <li><a href="#">Géographie</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Le site</h4>
+      <ul>
+        <li><a href="#">Comment réviser</a></li>
+        <li><a href="https://www.instagram.com/jea_wgn/?__pwa=1">Contact</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 Réviser.fr — Tous droits réservés</span>
+    <div class="credits">
+      <a href="#">Crédits images : pinteres </a>
+      <span>·</span>
+      <a href="#">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        // ===== CAROUSEL =====
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicatorsContainer = document.getElementById('indicators');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (i === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(i));
+            indicatorsContainer.appendChild(indicator);
+        }
+
+        const indicators = document.querySelectorAll('.indicator');
+
+        function updateCarousel() {
+            const offset = -currentIndex * 103;
+            track.style.transform = `translateX(${offset}%)`;
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+
+        // ===== NEWSLETTER POP-UP =====
+        const overlay = document.getElementById('newsletterOverlay');
+        const openBtn = document.getElementById('openNewsletter');
+        const closeBtn = document.getElementById('closeNewsletter');
+        const form = document.getElementById('newsletterForm');
+        const feedback = document.getElementById('newsletterFeedback');
+
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // empêche le scroll en arrière-plan
+        });
+
+        closeBtn.addEventListener('click', fermerPopup);
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) fermerPopup(); // clic en dehors = ferme
+        });
+
+        function fermerPopup() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            feedback.textContent = '';
+            form.reset();
+        }
+
+        // ===== ENVOI EMAIL AVEC EMAILJS =====
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const submitBtn = form.querySelector('.newsletter-submit');
+
+            submitBtn.textContent = 'Envoi...';
+            submitBtn.disabled = true;
+
+            emailjs.send(
+                "service_chq9h43",   //  Service ID EmailJS
+                "template_e2ampqj",  //  Template ID EmailJS
+                { to_email: email }
+            ).then(function() {
+                feedback.textContent = " Inscription réussie ! Vérifie ta boîte mail.";
+                feedback.style.color = "#5f8a78";
+                submitBtn.textContent = "S'inscrire";
+                submitBtn.disabled = false;
+                setTimeout(fermerPopup, 3000);
+            }, function(error) {
+                feedback.textContent = " Une erreur s'est produite. Réessaie plus tard.";
+                feedback.style.color = "#c0392b";
+                submitBtn.textContent = "S'inscrire";
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
